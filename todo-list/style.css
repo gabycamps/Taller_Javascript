@@ -1,0 +1,188 @@
+
+
+/* ---------- Base ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    background: linear-gradient(160deg, #E8DFF5 0%, #D3BEEA 100%);
+    font-family: Verdana, Geneva, "Segoe UI", sans-serif;
+    color: #3B2A55;
+}
+
+/* ---------- Tarjeta principal ---------- */
+.app {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(123, 92, 191, 0.25);
+}
+
+h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 28px;
+    color: #6B3FA0;
+    text-align: center;
+    margin: 0 0 28px;
+    letter-spacing: 0.5px;
+    
+}
+
+/* ---------- Formulario de agregar tarea ---------- */
+#input-tarea {
+    width: 65%;
+    padding: 10px 14px;
+    border: 2px solid #D9C6EF;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#input-tarea:focus {
+    border-color: #9B6FD6;
+}
+
+#btn-agregar {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #9B6FD6;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#btn-agregar:hover {
+    background: #7C4FC7;
+}
+
+#btn-eliminar-completadas {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #9B6FD6;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#btn-eliminar-completadas:hover {
+    background: #7C4FC7;
+}
+
+
+
+/* ---------- Mensaje de error ---------- */
+.error {
+    color: #C0392B;
+    font-size: 13px;
+    margin: 10px 0 0;
+}
+
+.oculto {
+    display: none;
+}
+
+/* ---------- Lista de tareas ---------- */
+#lista-tareas {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+}
+
+#lista-tareas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F7F1FC;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Emoji como marcador, en vez del punto por defecto */
+#lista-tareas li::before {
+    content: "🪻";
+    margin-right: 10px;
+}
+
+#lista-tareas li:hover {
+    background: #EFE3FA;
+}
+
+#lista-tareas li.completada {
+    text-decoration: line-through;
+    color: #A899BE;
+    background: #EDE7F5;
+}
+
+/* ---------- Botón eliminar ---------- */
+.btn-eliminar {
+    border: none;
+    background: transparent;
+    color: #B85C7A;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    background: #F6DCE4;
+}
+
+/* ---------- Contador ---------- */
+#contador {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #6B3FA0;
+    font-weight: bold;
+}
+
+/* ---------- Filtro ---------- */
+#filtro {
+    display: block;
+    width: 31%;
+    margin-top: 20px;
+    padding: 10px 14px;
+    border: 2px solid #D9C6EF;
+    border-radius: 10px;
+    background: #F7F1FC;
+    color: #6B3FA0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+    transition: border-color 0.2s ease;
+}
+
+#filtro:hover,
+#filtro:focus {
+    border-color: #9B6FD6;
+}
+
+#filtro option {
+    background: #FFFFFF;
+    color: #3B2A55;
+}

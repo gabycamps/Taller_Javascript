@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app">
+        <h1>Mi Lista de Tareas💜</h1>
+
+    <input type="text"
+        id="input-tarea"
+        placeholder="Escribir una tarea..."
+        autocomplete="off">
+    <button id="btn-agregar">+</button>
+
+    <select id="filtro">
+        <option value="todas">Todas</option>
+        <option value="pendientes">Pendientes</option>
+        <option value="completadas">Completadas</option>
+    </select>
+
+    <p id="mensaje-error" class="error oculto"></p>
+
+    <ul id="lista-tareas"></ul>
+
+    <button id="btn-eliminar-completadas">Borrar completadas</button>
+
+    <p id="contador">0 de 0 completadas</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
